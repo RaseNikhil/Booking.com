@@ -1,0 +1,24 @@
+.sign-up h1{
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+.seller-auth a{
+  cursor: pointer;
+  margin-top: 20px;
+  color: white;
+}
+
+.errorCredentials{
+  text-align: center;
+  color: red;
+}
+
+.seller-auth a:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  font-size: 1rem;
+  transition: padding 0.2s ease-in-out;
+}

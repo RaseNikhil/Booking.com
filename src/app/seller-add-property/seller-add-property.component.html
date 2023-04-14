@@ -1,0 +1,49 @@
+<div class="add-product">
+  <h1>Add Your Property</h1>
+  <p class="propertyAddedMessage">{{propertyAdded}}</p>
+  <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+    <input
+      ngModel
+      class="form-input"
+      name="hotelName"
+      type="text"
+      placeholder="Enter Your Hotel Name"
+    />
+    <input
+      ngModel
+      class="form-input"
+      name="hotelAddress"
+      type="text"
+      placeholder="Enter Your Hotel Address"
+    />
+    <input
+      ngModel
+      class="form-input"
+      name="rooms"
+      type="number"
+      placeholder="Available Rooms"
+    />
+    <input
+      ngModel
+      class="form-input"
+      name="roomPrices"
+      type="number"
+      placeholder="Price"
+    />
+    <textarea
+      ngModel
+      class="form-input"
+      name="description"
+      type="text"
+      placeholder="Description"
+    ></textarea>
+    <input
+      ngModel
+      class="form-input"
+      name="hotelImage"
+      type="text"
+      placeholder="Enter Hotel Image Url"
+    />
+    <button class="form-button">Add Property</button>
+  </form>
+</div>

@@ -1,0 +1,57 @@
+.property-list{
+  margin: 1em 3em 1em 3em;
+}
+.property-list h1{
+  text-align: center;
+  color: white;
+}
+table
+{
+  align-self: center;
+  text-align: center;
+  columns: white;
+  border-collapse: collapse;
+  background-color:rgba(255, 255, 255, 0.8);
+}
+img{
+  height: 120px;
+  width: 120px;
+  display: inline-flex;
+}
+
+table td button{
+  align-self: center;
+}
+
+.example-card{
+  display: flex;
+  background-size: contain;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 0%;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.6);
+}
+mat-card{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+mat-card:hover{
+  background-color: white;
+}
+mat-icon{
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.deleteMessage{
+  text-align: center;
+  color: white;
+  font-size: x-large;
+}
+.actions{
+  display: flex;
+  flex-direction: column;
+}
+.actions button{
+  margin:10px 0 10px 0;
+}

@@ -7,32 +7,36 @@ import {Router} from '@angular/router'
   providedIn: 'root'
 })
 export class LoginServiceService {
-  isUserLoggedIn = new BehaviorSubject<boolean>(false)
+  isSellerLoggedIn = new BehaviorSubject<boolean>(false)
   logInError = new EventEmitter<boolean>(false);
+
   constructor(private http:HttpClient,private router:Router) { }
-  userSignUp(data:SignUp){
-    return this.http.post('http://localhost:3000/userLogIn',data,{observe:'response'})
+
+  sellerSignUp(data:SignUp){
+    this.http.post('http://localhost:3000/sellerData',data,{observe:'response'})
     .subscribe((result)=>{
-      this.isUserLoggedIn.next(true);
-      localStorage.setItem('user-home',JSON.stringify(result.body))
-      this.router.navigate(['user-home'])
-      console.warn('result',result)
+      if(result){
+        localStorage.setItem('sellerData',JSON.stringify(result.body))
+        this.router.navigate(['seller-home'])
+      }
     });
   }
-  reloadUser(){
-    if(localStorage.getItem('userLogIn')){
-      this.isUserLoggedIn.next(true);
-      this.router.navigate(['user-home'])
+  reloadSeller(){
+    if(localStorage.getItem('sellerData')){
+      this.isSellerLoggedIn.next(true);
+      this.router.navigate(['seller-home'])
     }
   }
 
-  userLogIn(data:LogIn){
+  sellerLogIn(data:LogIn){
     console.log(data);
-    this.http.get(`http://localhost:3000/userData?email=${data.email}&password=${data.password}`,
+    this.http.get(`http://localhost:3000/sellerData?email=${data.email}&password=${data.password}`,
     {observe:'response'})
     .subscribe((result:any)=>{
       if(result && result.body && result.body.length){
-        console.warn("User Logged In")
+        this.logInError.emit(false);
+        localStorage.setItem('sellerData',JSON.stringify(result.body))
+        this.router.navigate(['seller-home']);
       }else{
         console.warn("Login Failed");
         this.logInError.emit(true);

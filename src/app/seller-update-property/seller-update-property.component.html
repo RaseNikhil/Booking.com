@@ -1,0 +1,49 @@
+<div class="update-product">
+  <h1 >Update Property</h1>
+  <p class="propertyUpdatedMessage">{{updateMessage}}</p>
+  <form #updateProduct="ngForm" (ngSubmit)="submit(updateProduct.value)" class="common-form">
+    <input
+      class="form-input"
+      name="hotelName"
+      type="text"
+      placeholder="Enter Your Hotel Name"
+      ngModel="{{updateDetails?.hotelName}}"
+    />
+    <input
+      ngModel="{{updateDetails?.hotelAddress}}"
+      class="form-input"
+      name="hotelAddress"
+      type="text"
+      placeholder="Enter Your Hotel Address"
+    />
+    <input
+      ngModel="{{updateDetails?.rooms}}"
+      class="form-input"
+      name="rooms"
+      type="number"
+      placeholder="Available Rooms"
+    />
+    <input
+      ngModel="{{updateDetails?.roomPrices}}"
+      class="form-input"
+      name="roomPrices"
+      type="number"
+      placeholder="Price"
+    />
+    <textarea
+      ngModel="{{updateDetails?.description}}"
+      class="form-input"
+      name="description"
+      type="text"
+      placeholder="Description"
+    ></textarea>
+    <input
+      class="form-input"
+      name="hotelImage"
+      type="text"
+      placeholder="Enter Hotel Image Url"
+      ngModel="{{updateDetails?.hotelImage}}"
+    />
+    <button class="form-button">Update</button>
+  </form>
+</div>

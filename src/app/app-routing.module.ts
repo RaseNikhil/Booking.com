@@ -1,21 +1,34 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {UserComponent} from './login/login.component'
-import { UserHomeComponent } from './user-home/user-home.component';
-import { UserAuthGuard } from './user-auth.guard';
+import {LoginComponent} from './seller/seller.component'
+import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { SellerAuthGuard } from './seller-auth.guard';
+import {SellerAddPropertyComponent} from './seller-add-property/seller-add-property.component';
+import {SellerUpdatePropertyComponent} from './seller-update-property/seller-update-property.component'
 
 const routes: Routes = [
   {
     path:'',
     component : HomeComponent
   },{
-    path:'userLogIn',
-    component:UserComponent
+    path:'sellerLogIn',
+    component:LoginComponent,
+    pathMatch:"full"
   },{
-    component:UserHomeComponent,
-    path:'user-home',
-    canActivate:[UserAuthGuard]
+
+    component:SellerHomeComponent,
+    path:'seller-home',
+    canActivate:[SellerAuthGuard]
+  },{
+    path:'seller-add-property',
+    component:SellerAddPropertyComponent,
+    canActivate:[SellerAuthGuard]
+  },{
+    path:'seller-update-property/:id',
+    component:SellerUpdatePropertyComponent,
+    canActivate:[SellerAuthGuard],
+    pathMatch:"full"
   }
 ];
 

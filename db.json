@@ -1,60 +1,27 @@
 {
-  "userData": [
+  "sellerData": [
     {
       "name": "Nikhil",
       "email": "n@gmail.com",
-      "password": "N12345",
-      "confirmPassword": "N12345",
+      "password": "1234",
       "id": 1
     },
     {
-      "name": "NIhal",
-      "email": "n@gmail.com",
-      "password": "12345",
-      "confirmPassword": "12345",
+      "name": "Gagan",
+      "email": "g@gmail.com",
+      "password": "1234",
       "id": 2
-    },
+    }
+  ],
+  "properties": [
     {
-      "name": "Gagan",
-      "email": "g@gmail.com",
-      "password": "12345678",
-      "confirmpassword": "12345678",
-      "id": 3
-    },
-    {
-      "name": "Gagan",
-      "email": "g@gmail.com",
-      "password": "12345678",
-      "confirmpassword": "12345678",
-      "id": 4
-    },
-    {
-      "name": "dfqwdf",
-      "email": "dw@gmail.com",
-      "password": "12345",
-      "confirmpassword": "12345",
-      "id": 5
-    },
-    {
-      "name": "jkfn",
-      "email": "j@gmail.com",
-      "password": "qweasdf",
-      "confirmpassword": "qwesd",
-      "id": 6
-    },
-    {
-      "name": "egff",
-      "email": "efre",
-      "password": "ferf",
-      "confirmpassword": "fwe",
-      "id": 7
-    },
-    {
-      "name": "DASX",
-      "email": "ZCZXZ",
-      "password": "XVCVC",
-      "confirmpassword": "ZCXC",
-      "id": 8
+      "hotelName": "Zolo Hemingway",
+      "hotelAddress": "Neeladri Nagar",
+      "rooms": "4",
+      "roomPrices": "15000",
+      "description": "Fully furnished PG Rooms available for Single and Double Sharing.",
+      "hotelImage": "https://rook.gumlet.io/uploads/center/cover_photo/62bd30f9588b5d000190aa38/_DSF1659_Edit_copy_2.jpg?format=webp&h=620&compress=true",
+      "id": 2
     }
   ]
 }

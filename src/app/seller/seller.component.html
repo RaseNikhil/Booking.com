@@ -2,8 +2,8 @@
   <!-- Login Form -->
   <div *ngIf="!showLogin" class="sign-up">
     <h1>Log In</h1>
-    <p>{{authError}}</p>
-    <form #sellerLogIn="ngForm" (ngSubmit)="login(sellerLogIn.value)" class="common-form ">
+    <p class="errorCredentials">{{authError}}</p>
+    <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form ">
       <input ngModel class="form-input" name ="email" type="email" placeholder="Enter Email">
       <input ngModel class="form-input" name="password" type="password" placeholder="Enter Password">
       <button class="form-button">Log In</button>
@@ -14,11 +14,10 @@
   <!-- SIgn Up -->
   <div *ngIf="showLogin" class="sign-up">
     <h1>Sign Up</h1>
-    <form #sellerSignUp="ngForm" (ngSubmit)="signup(sellerSignUp.value)" class="common-form ">
+    <form #sellerLogin="ngForm" (ngSubmit)="signup(sellerLogin.value)" class="common-form ">
       <input ngModel class="form-input" name ="name" type="text" placeholder="Enter Name">
       <input ngModel class="form-input" name ="email" type="email" placeholder="Enter Email">
       <input ngModel class="form-input" name="password" type="password" placeholder="Enter Password">
-      <input ngModel class="form-input" name="confirmpassword" type="password" placeholder="Confirm Password">
       <button class="form-button">Sign Up</button>
       <a (click)='openLogin()'>Already have an account</a>
     </form>

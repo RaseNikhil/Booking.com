@@ -1,0 +1,21 @@
+<div class="property-list">
+    <p class="deleteMessage">{{deleteMessage}}</p>
+  <mat-card class="card" *ngFor="let item of properties">
+    <div class="example-card">
+    <mat-card-content><img src="{{item.hotelImage}}"></mat-card-content>
+    <mat-card-content>
+      <h2>{{item.hotelName}}</h2>
+      <h4><mat-icon>room</mat-icon>{{item.hotelAddress}}</h4>
+      <p>{{item.description}}</p>
+      </mat-card-content>
+      <mat-card-content>
+      <h4>Available Rooms :- {{item.rooms}}</h4>
+      <h4>Price :- {{item.roomPrices}}</h4>
+    </mat-card-content>
+    <mat-card-actions class="actions">
+      <button routerLink="/seller-update-property/{{item.id}}"><mat-icon>edit</mat-icon></button>
+      <button (click)="deleteProperty(item.id)"><mat-icon>delete_forever</mat-icon></button>
+    </mat-card-actions>
+    </div>
+  </mat-card>
+</div>

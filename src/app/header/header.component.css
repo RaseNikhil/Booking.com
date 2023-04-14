@@ -1,6 +1,10 @@
 .nav{
 display: flex;
+background: transparent;
+position: relative;
+z-index: 1;
 justify-content: space-between;
+margin: 1em 3em 1em 3em;
 }
 .nav h1{
   color: white;
@@ -18,10 +22,21 @@ justify-content: space-between;
   padding-left: 15px;
   padding-top: 15px;
 }
-.nav li a{
+.nav li button{
   text-decoration: none;
   color:white;
+  background: transparent;
+  border-color: transparent;
 }
+.nav li button:hover{
+  background-color: rgba(255, 255, 255, 0.2)
+}
+
+.mat-icon{
+font-size: x-large;
+}
+
+
 .nav .nav-search{
   margin-top: 5px;
   flex: 1;
@@ -49,4 +64,10 @@ justify-content: space-between;
   background-color: #0071c2;
   border-top-right-radius: 17px;
   border-bottom-right-radius: 17px;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+  cursor: pointer;
 }

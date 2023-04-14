@@ -1,28 +1,47 @@
-body{
+body {
   font-family: sans-serif;
-  background-color: #003580;
+  /* background-color: #0d3a78; */
+  background-image:url(./assets/images/beach.jpeg) ;
+  margin: 1em 3em 1em 3em;
 }
-.header{
-  margin:0% 5% 0% 5%;
+.header {
+  margin: 0% 5% 0% 5%;
 }
-.common-form
-{
+.common-form {
   text-align: center;
   display: flex;
   margin: auto;
   flex-direction: column;
   width: 300px;
 }
-.form-input{
+.form-input {
   height: 30px;
   margin-bottom: 20px;
   padding-left: 10px;
   border: 1px solid #0071c2;
-  color:#0071c2
+  color: #0071c2;
 }
-.form-button{
+.form-button {
   height: 35px;
   background-color: #0071c2;
   border: 2px solid black;
   cursor: pointer;
+  width: 30%;
+  align-self: center;
+}
+
+.form-button:hover{
+  padding: 5px 10px;
+  font-size: 1rem;
+  transition: padding 0.2s ease-in-out;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

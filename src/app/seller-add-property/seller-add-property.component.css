@@ -1,0 +1,23 @@
+.add-product h1{
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+.form-button{
+  height: 35px;
+  background-color: #0071c2;
+  border: 2px solid black;
+  cursor: pointer;
+  width: 40%;
+  align-self: center;
+}
+textarea {
+  font-family: sans-serif;
+  resize: vertical;
+  height: 30px;
+}
+.propertyAddedMessage{
+  color: white;
+  text-align: center;
+}
